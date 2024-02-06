@@ -1,0 +1,17 @@
+app: streamlit-app
+env: capable-butterfly
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.63.0
+values:
+  containerPort: 80
+  gitRepository: YoucefGuichi/streamlit-app
+  gitSha: '{{ .SHA }}'
+  image:
+    repository: 127.0.0.1:32447/streamlit-app
+    tag: '{{ .SHA }}'
+  replicas: 1
+  resources:
+    ignoreLimits: true
