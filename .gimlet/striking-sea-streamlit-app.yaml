@@ -1,0 +1,27 @@
+app: streamlit-app
+env: striking-sea
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.70.0
+values:
+  containerPort: 8501
+  gitRepository: YoucefGuichi/streamlit-app
+  gitSha: '{{ .SHA }}'
+  image:
+    dockerfile: ""
+    registry: ""
+    repository: ghcr.io/youcefguichi/streamlit-app
+    strategy: dynamic
+    tag: v0.1.0
+  imagePullSecrets:
+    - '{{ .APP }}--pullsecret'
+  ingress:
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt
+      kubernetes.io/ingress.class: nginx
+    host: youcefguichi-streamlit-app-xldgyfnt.gimlet.app
+    tlsEnabled: true
+  resources:
+    ignoreLimits: true
