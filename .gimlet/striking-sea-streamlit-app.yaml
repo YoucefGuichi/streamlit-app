@@ -14,7 +14,7 @@ values:
     registry: ""
     repository: ghcr.io/youcefguichi/streamlit-app
     strategy: dynamic
-    tag: '{{ .SHA }}'
+    tag: v0.1.0
   imagePullSecrets:
     - '{{ .APP }}--pullsecret'
   ingress:
