@@ -1,4 +1,4 @@
-ame: Source API
+name: Streamlit app CI 
 
 on:
   push:
