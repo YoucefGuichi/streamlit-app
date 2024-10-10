@@ -54,4 +54,4 @@ jobs:
         platforms: linux/amd64,linux/arm64/v8
         push: true
         tags: |
-          ghcr.io/YoucefGuichi/streamlit-app:${{ steps.version.outputs.version }}
+          ghcr.io/youcefguichi/streamlit-app:${{ steps.version.outputs.version }}
